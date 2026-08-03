@@ -1,0 +1,74 @@
+name: GitHub Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Full deep-dive card
+      - name: Full metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: Dgiss
+          template: classic
+          config_theme: dark
+          config_timezone: Europe/Paris
+          base: header, activity, community, repositories, metadata
+
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_limit: 8
+
+          plugin_followup: yes
+          plugin_habits: yes
+          plugin_isocalendar: yes
+          plugin_topics: yes
+          plugin_lines: yes
+          plugin_stars: yes
+          plugin_traffic: yes
+
+      # Overview card — self-hosted replacement for github-readme-stats
+      - name: Overview card
+        uses: lowlighter/metrics@latest
+        with:
+          filename: assets/metrics-overview.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: Dgiss
+          config_theme: dark
+          config_timezone: Europe/Paris
+          base: header
+
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          plugin_languages: yes
+          plugin_languages_details: percentage
+          plugin_languages_ignored: html, css
+          plugin_languages_limit: 6
+
+      # Achievements card — self-hosted replacement for github-profile-trophy
+      - name: Achievements card
+        uses: lowlighter/metrics@latest
+        with:
+          filename: assets/metrics-achievements.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: Dgiss
+          config_theme: dark
+          base: ""
+
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_display: compact
+          plugin_achievements_limit: 0

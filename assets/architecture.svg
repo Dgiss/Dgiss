@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" fill="none" role="img" aria-label="Architecture: Flutter to GraphQL to AWS Lambda to DynamoDB to IoT to Dashboard">
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <linearGradient id="a-bg" x1="0" y1="0" x2="1000" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="1" stop-color="#070A08"/>
+    </linearGradient>
+
+    <radialGradient id="a-halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(500 130) scale(560 200)">
+      <stop stop-color="#00C96B" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#00C96B" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="a-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#00FF88" stroke-opacity="0.05" stroke-width="1" fill="none"/>
+    </pattern>
+
+    <filter id="a-glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="240" rx="16" fill="url(#a-bg)"/>
+  <rect width="1000" height="240" rx="16" fill="url(#a-grid)"/>
+  <rect width="1000" height="240" rx="16" fill="url(#a-halo)"/>
+  <rect x="0.5" y="0.5" width="999" height="239" rx="16" stroke="#00FF88" stroke-opacity="0.18"/>
+
+  <!-- header -->
+  <text class="mono" x="28" y="36" fill="#00FF88" font-size="13" letter-spacing="2.4" filter="url(#a-glow)">SYSTEM ARCHITECTURE</text>
+  <text class="mono" x="972" y="36" fill="#A1A1AA" fill-opacity="0.65" font-size="12" letter-spacing="1.2" text-anchor="end">client → api → compute → data → edge → insight</text>
+  <path d="M28 52 H972" stroke="#00FF88" stroke-opacity="0.12"/>
+
+  <!-- connectors -->
+  <g stroke="#00C96B" stroke-opacity="0.4" stroke-width="1.25" stroke-dasharray="3 4">
+    <path d="M170 132 H180"/>
+    <path d="M332 132 H342"/>
+    <path d="M494 132 H504"/>
+    <path d="M656 132 H666"/>
+    <path d="M818 132 H828"/>
+  </g>
+  <!-- flow chase : arrows light up in sequence -->
+  <g fill="#00FF88">
+    <path d="M168 127 L178 132 L168 137 Z">
+      <animate attributeName="opacity" values="0.3;1;0.3;0.3" dur="2.5s" begin="0s" repeatCount="indefinite"/>
+    </path>
+    <path d="M330 127 L340 132 L330 137 Z">
+      <animate attributeName="opacity" values="0.3;1;0.3;0.3" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M492 127 L502 132 L492 137 Z">
+      <animate attributeName="opacity" values="0.3;1;0.3;0.3" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M654 127 L664 132 L654 137 Z">
+      <animate attributeName="opacity" values="0.3;1;0.3;0.3" dur="2.5s" begin="0.9s" repeatCount="indefinite"/>
+    </path>
+    <path d="M816 127 L826 132 L816 137 Z">
+      <animate attributeName="opacity" values="0.3;1;0.3;0.3" dur="2.5s" begin="1.2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- stage 1 · Flutter -->
+  <g>
+    <rect x="28" y="86" width="140" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.30"/>
+    <rect x="28" y="86" width="140" height="2.5" rx="1.25" fill="#00FF88" fill-opacity="0.7"/>
+    <text class="mono" x="42" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">01 · CLIENT</text>
+    <text class="sans" x="42" y="140" fill="#FFFFFF" font-size="17" font-weight="600">Flutter</text>
+    <text class="mono" x="42" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">iOS · Android · Web</text>
+    <circle cx="152" cy="100" r="2.5" fill="#00FF88">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- stage 2 · GraphQL -->
+  <g>
+    <rect x="190" y="86" width="140" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.30"/>
+    <rect x="190" y="86" width="140" height="2.5" rx="1.25" fill="#00FF88" fill-opacity="0.7"/>
+    <text class="mono" x="204" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">02 · API</text>
+    <text class="sans" x="204" y="140" fill="#FFFFFF" font-size="17" font-weight="600">GraphQL</text>
+    <text class="mono" x="204" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">AppSync · Subs</text>
+    <circle cx="314" cy="100" r="2.5" fill="#00FF88">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- stage 3 · AWS Lambda -->
+  <g>
+    <rect x="352" y="86" width="140" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.30"/>
+    <rect x="352" y="86" width="140" height="2.5" rx="1.25" fill="#00FF88" fill-opacity="0.7"/>
+    <text class="mono" x="366" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">03 · COMPUTE</text>
+    <text class="sans" x="366" y="140" fill="#FFFFFF" font-size="17" font-weight="600">AWS Lambda</text>
+    <text class="mono" x="366" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">Serverless · Node</text>
+    <circle cx="476" cy="100" r="2.5" fill="#00FF88">
+      <animate attributeName="opacity" values="1;0.2;1" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- stage 4 · DynamoDB -->
+  <g>
+    <rect x="514" y="86" width="140" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.30"/>
+    <rect x="514" y="86" width="140" height="2.5" rx="1.25" fill="#00FF88" fill-opacity="0.7"/>
+    <text class="mono" x="528" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">04 · DATA</text>
+    <text class="sans" x="528" y="140" fill="#FFFFFF" font-size="17" font-weight="600">DynamoDB</text>
+    <text class="mono" x="528" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">Single-table · S3</text>
+    <circle cx="638" cy="100" r="2.5" fill="#00FF88">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- stage 5 · IoT -->
+  <g>
+    <rect x="676" y="86" width="140" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.30"/>
+    <rect x="676" y="86" width="140" height="2.5" rx="1.25" fill="#00FF88" fill-opacity="0.7"/>
+    <text class="mono" x="690" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">05 · EDGE</text>
+    <text class="sans" x="690" y="140" fill="#FFFFFF" font-size="17" font-weight="600">IoT</text>
+    <text class="mono" x="690" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">MQTT · Telemetry</text>
+    <circle cx="800" cy="100" r="2.5" fill="#00FF88">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- stage 6 · Dashboard -->
+  <g>
+    <rect x="838" y="86" width="134" height="92" rx="12" fill="#0A0C0A" stroke="#00FF88" stroke-opacity="0.55"/>
+    <rect x="838" y="86" width="134" height="2.5" rx="1.25" fill="#00FF88"/>
+    <text class="mono" x="852" y="110" fill="#00FF88" font-size="10" letter-spacing="1.6">06 · INSIGHT</text>
+    <text class="sans" x="852" y="140" fill="#FFFFFF" font-size="17" font-weight="600">Dashboard</text>
+    <text class="mono" x="852" y="162" fill="#A1A1AA" fill-opacity="0.7" font-size="10.5">React · Analytics</text>
+    <circle cx="956" cy="100" r="2.5" fill="#00FF88" filter="url(#a-glow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- footer -->
+  <text class="mono" x="28" y="212" fill="#A1A1AA" fill-opacity="0.55" font-size="11" letter-spacing="1">
+    event-driven · serverless · real-time · infrastructure as code
+  </text>
+  <text class="mono" x="972" y="212" fill="#00C96B" font-size="11" letter-spacing="1" text-anchor="end">status: production</text>
+  <circle cx="818" cy="208" r="3" fill="#00FF88">
+    <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220" fill="none" role="img" aria-label="SuperFleet — Enterprise fleet management platform">
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <linearGradient id="sf-bg" x1="0" y1="0" x2="640" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/><stop offset="1" stop-color="#070A08"/>
+    </linearGradient>
+    <radialGradient id="sf-halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(470 60) scale(300 220)">
+      <stop stop-color="#00FF88" stop-opacity="0.16"/><stop offset="1" stop-color="#00FF88" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="sf-grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" stroke="#00FF88" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+    </pattern>
+    <filter id="sf-glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="640" height="220" rx="14" fill="url(#sf-bg)"/>
+  <rect width="640" height="220" rx="14" fill="url(#sf-grid)"/>
+  <rect width="640" height="220" rx="14" fill="url(#sf-halo)"/>
+  <rect x="0.5" y="0.5" width="639" height="219" rx="14" stroke="#00FF88" stroke-opacity="0.20"/>
+  <rect x="0" y="0" width="4" height="220" fill="#00FF88" fill-opacity="0.8"/>
+
+  <!-- route map motif -->
+  <g opacity="0.95">
+    <path id="sf-route" d="M330 178 C 372 178, 386 130, 424 128 C 466 126, 470 84, 508 76 C 546 68, 570 56, 606 52"
+          stroke="#00C96B" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M330 178 C 372 178, 386 130, 424 128 C 466 126, 470 84, 508 76 C 546 68, 570 56, 606 52"
+          stroke="#00FF88" stroke-width="2" stroke-linecap="round" fill="none"
+          stroke-dasharray="60 340" filter="url(#sf-glow)">
+      <animate attributeName="stroke-dashoffset" values="400;0" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- vehicle -->
+    <circle r="4.5" fill="#00FF88" filter="url(#sf-glow)">
+      <animateMotion dur="4s" repeatCount="indefinite"
+        path="M330 178 C 372 178, 386 130, 424 128 C 466 126, 470 84, 508 76 C 546 68, 570 56, 606 52"/>
+    </circle>
+
+    <!-- pins -->
+    <g fill="none" stroke="#00FF88" stroke-opacity="0.55" stroke-width="1.5">
+      <circle cx="424" cy="128" r="7"/><circle cx="508" cy="76" r="7"/>
+    </g>
+    <circle cx="424" cy="128" r="2.5" fill="#00FF88"/>
+    <circle cx="508" cy="76" r="2.5" fill="#00FF88"/>
+    <circle cx="606" cy="52" r="10" fill="#00FF88" fill-opacity="0.12">
+      <animate attributeName="r" values="6;14;6" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.25;0;0.25" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="606" cy="52" r="3" fill="#00FF88"/>
+  </g>
+
+  <!-- content -->
+  <text class="mono" x="28" y="40" fill="#00FF88" font-size="11" letter-spacing="2.2" filter="url(#sf-glow)">01 — FLEET PLATFORM</text>
+  <text class="sans" x="28" y="82" fill="#FFFFFF" font-size="32" font-weight="700" letter-spacing="-0.5">SuperFleet</text>
+  <text class="sans" x="28" y="110" fill="#A1A1AA" font-size="13.5">Enterprise fleet management &amp; live GPS telemetry.</text>
+
+  <!-- live metrics strip -->
+  <g class="mono" font-size="10.5" letter-spacing="1">
+    <rect x="28" y="130" width="86" height="24" rx="6" fill="#00FF88" fill-opacity="0.08" stroke="#00FF88" stroke-opacity="0.28"/>
+    <text x="40" y="146" fill="#00FF88">REAL-TIME</text>
+    <rect x="122" y="130" width="70" height="24" rx="6" fill="#00FF88" fill-opacity="0.08" stroke="#00FF88" stroke-opacity="0.28"/>
+    <text x="134" y="146" fill="#00FF88">IoT · GPS</text>
+    <rect x="200" y="130" width="88" height="24" rx="6" fill="#00FF88" fill-opacity="0.08" stroke="#00FF88" stroke-opacity="0.28"/>
+    <text x="212" y="146" fill="#00FF88">SERVERLESS</text>
+  </g>
+
+  <text class="mono" x="28" y="182" fill="#A1A1AA" fill-opacity="0.75" font-size="11">Flutter · AWS · GraphQL · DynamoDB · IoT Core</text>
+  <g>
+    <circle cx="32" cy="200" r="3" fill="#00FF88">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text class="mono" x="44" y="204" fill="#00C96B" font-size="10.5" letter-spacing="1.4">LIVE IN PRODUCTION</text>
+  </g>
+</svg>

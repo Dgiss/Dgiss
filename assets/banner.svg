@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" fill="none" role="img" aria-label="Driss Chahm — Product Builder, Full Stack Developer, AWS Cloud Architect">
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <linearGradient id="b-bg" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="0.5" stop-color="#070A08"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+
+    <radialGradient id="b-halo1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(120 40) rotate(38) scale(620 420)">
+      <stop stop-color="#00FF88" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#00FF88" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="b-halo2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1030 300) rotate(-25) scale(420 300)">
+      <stop stop-color="#00C96B" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00C96B" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="b-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#00FF88"/>
+      <stop offset="0.65" stop-color="#00C96B" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#00C96B" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="b-edge" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00FF88" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#00FF88" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#00C96B" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <pattern id="b-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#00FF88" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+    </pattern>
+
+    <filter id="b-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="b-soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <clipPath id="b-card">
+      <rect x="24" y="24" width="1152" height="352" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── surface ───────────────────────────────────────────── -->
+  <rect width="1200" height="400" rx="24" fill="url(#b-bg)"/>
+  <rect width="1200" height="400" rx="24" fill="url(#b-grid)"/>
+  <rect width="1200" height="400" rx="24" fill="url(#b-halo1)"/>
+  <rect width="1200" height="400" rx="24" fill="url(#b-halo2)"/>
+
+  <!-- ── terminal card ─────────────────────────────────────── -->
+  <rect x="24" y="24" width="1152" height="352" rx="18" fill="#060706" fill-opacity="0.72"
+        stroke="url(#b-edge)" stroke-width="1.25"/>
+
+  <g clip-path="url(#b-card)">
+    <!-- scanline -->
+    <rect x="24" y="24" width="1152" height="2" fill="#00FF88" fill-opacity="0.10">
+      <animate attributeName="y" values="24;376;24" dur="9s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ── network mesh ────────────────────────────────────── -->
+    <g opacity="0.9">
+      <g stroke="#00FF88" stroke-opacity="0.22" stroke-width="1">
+        <path d="M902 118 L1012 196"/>
+        <path d="M1012 196 L1084 108"/>
+        <path d="M1012 196 L1128 186"/>
+        <path d="M1012 196 L926 254"/>
+        <path d="M1012 196 L1058 288"/>
+        <path d="M926 254 L964 330"/>
+        <path d="M1058 288 L964 330"/>
+        <path d="M1084 108 L1128 186"/>
+        <path d="M902 118 L926 254"/>
+      </g>
+
+      <circle cx="1012" cy="196" r="16" fill="#00FF88" fill-opacity="0.10" filter="url(#b-soft)"/>
+      <circle cx="1012" cy="196" r="5" fill="#00FF88">
+        <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+
+      <g fill="#00C96B">
+        <circle cx="902" cy="118" r="3.5">
+          <animate attributeName="fill-opacity" values="0.45;1;0.45" dur="3.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1084" cy="108" r="3.5">
+          <animate attributeName="fill-opacity" values="1;0.4;1" dur="4.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1128" cy="186" r="3.5">
+          <animate attributeName="fill-opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="926" cy="254" r="3.5">
+          <animate attributeName="fill-opacity" values="1;0.45;1" dur="3.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1058" cy="288" r="3.5">
+          <animate attributeName="fill-opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="964" cy="330" r="3.5">
+          <animate attributeName="fill-opacity" values="1;0.5;1" dur="4.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- data packets -->
+      <circle r="2.5" fill="#00FF88">
+        <animateMotion path="M902 118 L1012 196 L1058 288 L964 330" dur="4.5s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0;1;1;0" dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="2.5" fill="#00FF88">
+        <animateMotion path="M1128 186 L1012 196 L926 254" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0;1;1;0" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="2.5" fill="#00FF88">
+        <animateMotion path="M1084 108 L1012 196 L926 254 L964 330" dur="5.2s" begin="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0;1;1;0" dur="5.2s" begin="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ── window chrome ─────────────────────────────────────── -->
+  <path d="M24 80 H1176" stroke="#00FF88" stroke-opacity="0.14" stroke-width="1"/>
+  <circle cx="58" cy="52" r="5.5" fill="#00FF88" fill-opacity="0.85"/>
+  <circle cx="80" cy="52" r="5.5" fill="#00C96B" fill-opacity="0.55"/>
+  <circle cx="102" cy="52" r="5.5" fill="#A1A1AA" fill-opacity="0.28"/>
+  <text class="mono" x="600" y="57" fill="#A1A1AA" fill-opacity="0.7" font-size="13"
+        letter-spacing="1.4" text-anchor="middle">driss@chahm — ~/drisschahm.dev</text>
+
+  <!-- ── content ───────────────────────────────────────────── -->
+  <text class="mono" x="64" y="134" font-size="18" letter-spacing="1">
+    <tspan fill="#00FF88" filter="url(#b-glow)">$</tspan>
+    <tspan fill="#A1A1AA" dx="10">whoami</tspan>
+  </text>
+
+  <text class="sans" x="64" y="208" fill="#FFFFFF" font-size="60" font-weight="700" letter-spacing="-1">
+    DRISS CHAHM
+  </text>
+
+  <!-- accent bar + travelling shimmer -->
+  <rect x="64" y="230" width="330" height="3" rx="1.5" fill="url(#b-accent)"/>
+  <rect y="230" width="46" height="3" rx="1.5" fill="#00FF88" filter="url(#b-glow)">
+    <animate attributeName="x" values="64;348;64" dur="4.5s" repeatCount="indefinite"
+             calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    <animate attributeName="opacity" values="0.15;0.9;0.15" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <text class="mono" x="64" y="272" fill="#A1A1AA" font-size="15.5" letter-spacing="3.2">
+    PRODUCT BUILDER · FULL STACK · AWS CLOUD ARCHITECT
+  </text>
+
+  <text class="mono" x="64" y="330" font-size="19">
+    <tspan fill="#00FF88" filter="url(#b-glow)">$</tspan>
+    <tspan fill="#FFFFFF" dx="10">building products, not just software</tspan>
+  </text>
+  <rect x="516" y="313" width="10" height="22" fill="#00FF88" filter="url(#b-glow)">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- corner ticks -->
+  <g stroke="#00FF88" stroke-opacity="0.5" stroke-width="1.5" fill="none">
+    <path d="M24 52 V42 A18 18 0 0 1 42 24 H52"/>
+    <path d="M1148 24 H1158 A18 18 0 0 1 1176 42 V52"/>
+    <path d="M1176 348 V358 A18 18 0 0 1 1158 376 H1148"/>
+    <path d="M52 376 H42 A18 18 0 0 1 24 358 V348"/>
+  </g>
+</svg>

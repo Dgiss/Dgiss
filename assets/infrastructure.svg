@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" fill="none" role="img" aria-label="Infrastructure philosophy: layered stack from users to business decisions">
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <linearGradient id="i-bg" x1="0" y1="0" x2="1000" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/><stop offset="1" stop-color="#070A08"/>
+    </linearGradient>
+    <linearGradient id="i-spine" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#00FF88" stop-opacity="0.8"/><stop offset="1" stop-color="#00C96B" stop-opacity="0.25"/>
+    </linearGradient>
+    <pattern id="i-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#00FF88" stroke-opacity="0.045" stroke-width="1" fill="none"/>
+    </pattern>
+    <filter id="i-glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="470" rx="16" fill="url(#i-bg)"/>
+  <rect width="1000" height="470" rx="16" fill="url(#i-grid)"/>
+  <rect x="0.5" y="0.5" width="999" height="469" rx="16" stroke="#00FF88" stroke-opacity="0.18"/>
+
+  <text class="mono" x="32" y="40" fill="#00FF88" font-size="13" letter-spacing="2.4" filter="url(#i-glow)">INFRASTRUCTURE PHILOSOPHY</text>
+  <text class="mono" x="968" y="40" fill="#A1A1AA" fill-opacity="0.6" font-size="11.5" letter-spacing="1.2" text-anchor="end">from user intent to business decision</text>
+  <path d="M32 56 H968" stroke="#00FF88" stroke-opacity="0.12"/>
+
+  <!-- vertical spine -->
+  <path d="M96 84 V430" stroke="url(#i-spine)" stroke-width="1.5"/>
+  <circle r="4" fill="#00FF88" filter="url(#i-glow)">
+    <animate attributeName="cy" values="84;430" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="96;96" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- layer 1 -->
+  <circle cx="96" cy="90" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="72" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.055" stroke="#00FF88" stroke-opacity="0.30"/>
+  <text class="mono" x="150" y="95" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L1</text>
+  <text class="sans" x="188" y="95" fill="#FFFFFF" font-size="14.5" font-weight="600">Users</text>
+  <text class="mono" x="952" y="95" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">real people, real problems</text>
+
+  <!-- layer 2 -->
+  <circle cx="96" cy="139" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="121" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.05" stroke="#00FF88" stroke-opacity="0.26"/>
+  <text class="mono" x="150" y="144" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L2</text>
+  <text class="sans" x="188" y="144" fill="#FFFFFF" font-size="14.5" font-weight="600">Flutter / React</text>
+  <text class="mono" x="952" y="144" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">interface layer</text>
+
+  <!-- layer 3 -->
+  <circle cx="96" cy="188" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="170" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.045" stroke="#00FF88" stroke-opacity="0.24"/>
+  <text class="mono" x="150" y="193" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L3</text>
+  <text class="sans" x="188" y="193" fill="#FFFFFF" font-size="14.5" font-weight="600">GraphQL</text>
+  <text class="mono" x="952" y="193" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">one typed contract</text>
+
+  <!-- layer 4 -->
+  <circle cx="96" cy="237" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="219" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.04" stroke="#00FF88" stroke-opacity="0.22"/>
+  <text class="mono" x="150" y="242" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L4</text>
+  <text class="sans" x="188" y="242" fill="#FFFFFF" font-size="14.5" font-weight="600">AWS Lambda</text>
+  <text class="mono" x="952" y="242" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">scale to zero, scale to peak</text>
+
+  <!-- layer 5 -->
+  <circle cx="96" cy="286" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="268" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.035" stroke="#00FF88" stroke-opacity="0.20"/>
+  <text class="mono" x="150" y="291" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L5</text>
+  <text class="sans" x="188" y="291" fill="#FFFFFF" font-size="14.5" font-weight="600">DynamoDB</text>
+  <text class="mono" x="952" y="291" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">access patterns first</text>
+
+  <!-- layer 6 -->
+  <circle cx="96" cy="335" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="317" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.03" stroke="#00FF88" stroke-opacity="0.18"/>
+  <text class="mono" x="150" y="340" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L6</text>
+  <text class="sans" x="188" y="340" fill="#FFFFFF" font-size="14.5" font-weight="600">IoT Devices</text>
+  <text class="mono" x="952" y="340" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">the physical world, streamed</text>
+
+  <!-- layer 7 -->
+  <circle cx="96" cy="384" r="5" fill="#050505" stroke="#00FF88" stroke-width="1.5"/>
+  <rect x="132" y="366" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.028" stroke="#00FF88" stroke-opacity="0.16"/>
+  <text class="mono" x="150" y="389" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L7</text>
+  <text class="sans" x="188" y="389" fill="#FFFFFF" font-size="14.5" font-weight="600">Analytics</text>
+  <text class="mono" x="952" y="389" fill="#A1A1AA" fill-opacity="0.7" font-size="11" text-anchor="end">measure before optimizing</text>
+
+  <!-- layer 8 · outcome -->
+  <circle cx="96" cy="430" r="5.5" fill="#00FF88" filter="url(#i-glow)"/>
+  <rect x="132" y="412" width="836" height="36" rx="8" fill="#00FF88" fill-opacity="0.10" stroke="#00FF88" stroke-opacity="0.55"/>
+  <text class="mono" x="150" y="435" fill="#00FF88" font-size="10.5" letter-spacing="1.6">L8</text>
+  <text class="sans" x="188" y="435" fill="#00FF88" font-size="14.5" font-weight="700">Business Decisions</text>
+  <text class="mono" x="952" y="435" fill="#00C96B" font-size="11" text-anchor="end">the only metric that matters</text>
+</svg>
