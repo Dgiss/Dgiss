@@ -125,11 +125,14 @@ Productivity tooling
 
 <img src="./assets/project-ai.svg" width="100%" alt="AI Suite"/>
 
-**AI Suite** — automation powered by LLM agents.
+**AI & Automation** — building intelligent assistants and business automation tools.
 
-`Agents` `RAG` `Chatbots` `API integrations`
+`AI Assistants` `Workflow Automation` `OpenAI` `AWS Bedrock`
 
-<img src="https://img.shields.io/badge/Python-050505?style=flat-square&logo=python&logoColor=00FF88&labelColor=050505"/> <img src="https://img.shields.io/badge/Bedrock-050505?style=flat-square&logo=amazonaws&logoColor=00FF88&labelColor=050505"/> <img src="https://img.shields.io/badge/OpenAI-050505?style=flat-square&logo=openai&logoColor=00FF88&labelColor=050505"/> <img src="https://img.shields.io/badge/Node.js-050505?style=flat-square&logo=nodedotjs&logoColor=00FF88&labelColor=050505"/>
+<img src="https://img.shields.io/badge/OpenAI-050505?style=flat-square&logo=openai&logoColor=00FF88&labelColor=050505"/>
+<img src="https://img.shields.io/badge/AWS%20Bedrock-050505?style=flat-square&logo=amazonaws&logoColor=00FF88&labelColor=050505"/>
+<img src="https://img.shields.io/badge/Python-050505?style=flat-square&logo=python&logoColor=00FF88&labelColor=050505"/>
+<img src="https://img.shields.io/badge/GraphQL-050505?style=flat-square&logo=graphql&logoColor=00FF88&labelColor=050505"/>
 
 </td>
 <td width="50%" valign="top">
